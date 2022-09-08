@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --darkCyan: hsl(185, 75%, 39%);
+    --darkBlue: hsl(229, 23%, 23%);
+    --darkGrayBlue: hsl(227, 10%, 46%);
+    --darkGray: hsl(0, 0%, 59%);
+    --font: 'Kumbh Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--darkCyan);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-position: right 51vw bottom 20vh, left 45vw top 50vh;
+    background-repeat: no-repeat, no-repeat;
+    font-family: var(--font);
+}
+
+/* Card */
+
+.card__container {
+    position: relative;
+    margin: 170px auto 50px;
+    background-color: white;
+    width: 330px;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card__bubbles {
+    background: url(../images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    height: 140px;
+}
+
+.card__photo {
+    position: absolute;
+    top: 87px;
+    left: 35%;
+}
+
+.card__photo img {
+    border: 5px solid white;
+    border-radius: 50%;
+    height: 96px;
+}
+
+.personal__data-container {
+    text-align: center;
+    height: 150px;
+    padding: 75px;
+}
+
+.personal__name {
+    font-weight: 700;
+    color: var(--darkBlue);
+    font-size: 18px;
+}
+
+.personal__ages,
+.personal__city {
+    color: var(--darkGrayBlue);
+}
+
+.personal__ages {
+    font-size: 15px;
+}
+
+.personal__city {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.stats__container {
+    display: flex;
+    z-index: 99;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid var(--darkGray);
+    align-items: center;
+}
+
+.statistics {
+    text-align: center;
+}
+
+.quantify {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--darkBlue);
+    font-size: 18px;
+}
+
+.units {
+    font-size: 0.7em;
+    color: var(--darkGray);
+    letter-spacing: 2px;
+}
+
+/* Header */
+.attribution { font-size: 11px; text-align: center; color: white;}
+.attribution a { color: hsl(228, 45%, 44%); color: white;}
+
+/* Media queries */
+
+/* >1440px */
+@media only screen and (min-width: 1440px) {
+    .card__container {
+        width: 350px;
+    }
+}
